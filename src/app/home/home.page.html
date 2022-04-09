@@ -1,0 +1,71 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Projeto Love me
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div>
+    <ion-header collapse="condense">
+      <ion-toolbar>
+        <ion-title size="large">Love me please</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <div class="container">
+      <p class="text-white "> <strong>Love me or die!</strong></p>
+
+      <br>
+      <p class="text-white "><strong>Insira o seu nome:</strong></p>
+
+      <br>
+      <ion-item>
+        <ion-input [(ngModel)]="nome1" placeholder="Ex. Maria"></ion-input>
+      </ion-item>
+
+      <br>
+      <p class="text-white "> <strong>Insira o nome do seu crush:</strong></p>
+
+      <br>
+      <ion-item>
+        <ion-input [(ngModel)]="nome2" placeholder="Ex. Emanuel"></ion-input>
+      </ion-item>
+      <div>
+        <br>
+        <button class="btn btn-outline-info" (click)="enviarDados()">
+          Calcular
+        </button>
+        <br>
+        <br>
+
+        <button class="btn btn-outline-info" (click)="limpar()">
+          Limpar
+        </button>
+      </div>
+
+      <br>
+
+      <p class="text-white bg-dark"><strong>A porcentagem é de:</strong></p>
+      <br>
+      <div>
+          <div class="resultadoo">
+        <p class="text-white bg-dark" >
+            {{resultado }}% 
+        </p>
+      </div>
+       <br>
+        <p id="mensagem" class="text-white bg-dark ">{{mensagem}}</p>
+        <img [class.d-none]="!imagem" src="{{img}}">
+      
+      </div>
+      
+
+
+
+
+    </div>
+  </div>
+
+</ion-content>
